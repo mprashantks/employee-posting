@@ -2,56 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Todo API | Help</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Employee transfer</title>
   </head>
-
-  <body class="centered-form">
-    <div class="centered-form__form">
-
-      <div class="form-field">
-        <h3>API Help</h3>
-      </div>
-      <div class="form-field">
-        <p>Before using this API you need to register as an user.</p>
-        <p>Use the below given url to register.</p>
-        <p>POST - https://enigmatic-coast-59622.herokuapp.com/users</p>
-        <p>You need to pass a JSON object as request body consisting of your email and password. For example -</p>
-        <p>{ "email": "your_email", "password": "your_password" }</p>
-      </div>
-      <div class="form-field">
-        <h4>API Routes</h4>
-        <h5>1. Login as user</h5>
-        <p>POST - https://enigmatic-coast-59622.herokuapp.com/users/login</p>
-        <p>Request body - JSON Object e.g., { "email": "your_email",	"password": "your_password" }</p>
-        <p>The generated response contains x-auth header which consists of a value. You need to use this value for subsequent requests.</p>
-        <br>
-        <h5>2. Get all todos</h5>
-        <p>GET - https://enigmatic-coast-59622.herokuapp.com/todo</p>
-        <p>Request header - Key-value pair e.g., {x-auth: "x-auth value"}</p>
-        <br>
-        <h5>3. Add a todo</h5>
-        <p>POST - https://enigmatic-coast-59622.herokuapp.com/todo</p>
-        <p>Request body - JSON Object e.g., {	"text": "your_todo_text" }</p>
-        <p>Request header - Key-value pair e.g., {x-auth: "x-auth value"}</p>
-        <br>
-        <h5>4. Get a todo by id</h5>
-        <p>GET - https://enigmatic-coast-59622.herokuapp.com/todo/{id_of_todo}</p>
-        <p>Request header - Key-value pair e.g., {x-auth: "x-auth value"}</p>
-        <br>
-        <h5>5. Update a todo by id</h5>
-        <p>PATCH - https://enigmatic-coast-59622.herokuapp.com/todo/{id_of_todo}</p>
-        <p>Request header - Key-value pair e.g., {x-auth: "x-auth value"}</p>
-        <br>
-        <h5>6. DELETE a todo by id</h5>
-        <p>DELETE - https://enigmatic-coast-59622.herokuapp.com/todo/{id_of_todo}</p>
-        <p>Request header - Key-value pair e.g., {x-auth: "x-auth value"}</p>
-        <br>
-        <h5>7. Logout</h5>
-        <p>DELETE - https://enigmatic-coast-59622.herokuapp.com/users/me/token</p>
-        <p>Request header - Key-value pair e.g., {x-auth: "x-auth value"}</p>
-      </div>
-    </div>
+  <body>
+    Hello !!
   </body>
 </html>
