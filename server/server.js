@@ -67,6 +67,11 @@ app.delete('/employees/me/token', authenticate, (req, res) => {
   });
 });
 
+/* ----------- Handles for employee transfer -------------- */
+// Handle for auto transfer of employees
+app.post('/transfer', (req, res) => {
+  
+});
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

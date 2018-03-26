@@ -32,6 +32,16 @@ var EmployeeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  posting: {
+    dolp: {
+      type: String,
+      required: true
+    },
+    donp: {
+      type: String,
+      required: true
+    }
+  },
   email: {
     type: String,
     trim: true,
@@ -126,14 +136,12 @@ var EmployeeSchema = new mongoose.Schema({
 EmployeeSchema.methods.toJSON = function () {
   var user = this;
   var userObject = user.toObject();
-
   return _.pick(userObject, ['_id', 'email']);
 };
 
 // Called by server.js /employees route to register
 EmployeeSchema.pre('save', function (next) {
   var employee = this;
-
   if(employee.isModified('password')) {
     bcrypt.genSalt(10, (err, salt) => {
       bcrypt.hash(employee.password, salt,  (err, hash) => {
@@ -152,7 +160,6 @@ EmployeeSchema.methods.generateAuthToken = function () {
   var access = 'auth';
   var token = jwt.sign({_id: employee._id.toHexString(), access}, process.env.JWT_SECRET).toString();
   employee.tokens.push({access, token});
-
   return employee.save().then(() => {
     return token;
   });
@@ -160,7 +167,6 @@ EmployeeSchema.methods.generateAuthToken = function () {
 
 EmployeeSchema.methods.removeToken = function (token) {
   var employee = this;
-
   return employee.update({
     $pull: {
       tokens: {token}
@@ -171,12 +177,10 @@ EmployeeSchema.methods.removeToken = function (token) {
 // Called by server.js employees/login route for login
 EmployeeSchema.statics.findByCredentials = function (email, password) {
   var Employee = this;
-
   return Employee.findOne({email}).then((employee) => {
     if(!employee) {
       return Promise.reject();
     }
-
     return new Promise((resolve, reject) => {
       bcrypt.compare(password, employee.password, (err, res) => {
           if(res) {
@@ -192,30 +196,25 @@ EmployeeSchema.statics.findByCredentials = function (email, password) {
 // Called by server.js employees/ route to verify if employee database consist of particular employee code or not
 EmployeeSchema.statics.findByCode = function (code) {
   var Employee = this;
-
   return Employee.findOne({code}).then((employee) => {
     if(!employee) {
       return Promise.reject();
     }
-
     return new Promise((resolve, reject) => {
       resolve(employee);
     });
   });
 };
 
-
 // Called by middleware/authenticate to find if user is authentic or logged in
 EmployeeSchema.statics.findByToken = function (token) {
   var Employee = this;
   var decoded;
-
   try {
     decoded = jwt.verify(token, process.env.JWT_SECRET);
   } catch(e) {
     return Promise.reject();
   }
-
   return Employee.findOne({
     '_id': decoded._id,
     'tokens.access': 'auth',
@@ -223,6 +222,13 @@ EmployeeSchema.statics.findByToken = function (token) {
   });
 };
 
+
+/* --------------- Employee transfer ----------------*/
+// Query employee collection to get all employees with nearing transfer date
+EmployeeSchema.statics.findTransferEmployees = function () {
+  var Employee = this;
+
+};
 
 
 var Employee = mongoose.model('Employee', EmployeeSchema);
