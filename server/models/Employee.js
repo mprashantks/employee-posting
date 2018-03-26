@@ -3,6 +3,7 @@ const validator = require('validator');
 const _ = require('lodash');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const moment = require('moment');
 
 var EmployeeSchema = new mongoose.Schema({
   code: {
@@ -29,7 +30,7 @@ var EmployeeSchema = new mongoose.Schema({
     required: true
   },
   dob: {
-    type: String,
+    type: Date,
     required: true
   },
   posting: {
@@ -227,7 +228,21 @@ EmployeeSchema.statics.findByToken = function (token) {
 // Query employee collection to get all employees with nearing transfer date
 EmployeeSchema.statics.findTransferEmployees = function () {
   var Employee = this;
-
+  var current_date = moment();
+  var next_transfer_date = moment(current_date).add(6, 'months');
+  return Employee.find({
+    dob: {
+      $gte: current_date.toDate(),
+      $lte: next_transfer_date.toDate()
+    }
+  }).then((employees) => {
+    if(employees.length == 0) {
+      return Promise.reject();
+    }
+    return new Promise((resolve, reject) => {
+      resolve(employees);
+    });
+  });
 };
 
 

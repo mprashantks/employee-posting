@@ -3,11 +3,9 @@ require('./config/config');
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-// const {ObjectID} = require('mongodb');
 const _ = require('lodash');
 
 const {mongoose} = require('./db/mongoose');
-// const {Todo} = require('./models/Todo');
 const {Employee} = require('./models/Employee');
 const {authenticate} = require('./middleware/authenticate');
 
@@ -69,8 +67,12 @@ app.delete('/employees/me/token', authenticate, (req, res) => {
 
 /* ----------- Handles for employee transfer -------------- */
 // Handle for auto transfer of employees
-app.post('/transfer', (req, res) => {
-  
+app.post('/admin/transfer', (req, res) => {
+  Employee.findTransferEmployees().then((employees) => {
+    res.status(200).send(employees);
+  }).catch((e) => {
+    res.status(400).send();
+  });
 });
 
 app.listen(port, () => {
