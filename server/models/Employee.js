@@ -29,6 +29,12 @@ var EmployeeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  phone: {
+    type: String,
+    required: true,
+    minlength: 10,
+    trim: true
+  },
   dob: {
     type: Date,
     required: true
