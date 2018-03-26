@@ -35,11 +35,11 @@ var EmployeeSchema = new mongoose.Schema({
   },
   posting: {
     dolp: {
-      type: String,
+      type: Date,
       required: true
     },
     donp: {
-      type: String,
+      type: Date,
       required: true
     }
   },
@@ -231,7 +231,7 @@ EmployeeSchema.statics.findTransferEmployees = function () {
   var current_date = moment();
   var next_transfer_date = moment(current_date).add(6, 'months');
   return Employee.find({
-    dob: {
+    'posting.donp': {
       $gte: current_date.toDate(),
       $lte: next_transfer_date.toDate()
     }
