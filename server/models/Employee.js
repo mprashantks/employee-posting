@@ -53,7 +53,6 @@ var EmployeeSchema = new mongoose.Schema({
     type: String,
     trim: true,
     minlength: 1,
-    unique: true,
     required: true,
     validate: {
       validator: validator.isEmail,
@@ -210,6 +209,15 @@ EmployeeSchema.statics.findByCode = function (code) {
     return new Promise((resolve, reject) => {
       resolve(employee);
     });
+  });
+};
+
+EmployeeSchema.statics.findByEmail = function (email) {
+  var Employee = this;
+  return Employee.findOne({email}).then((employee) => {
+    if(employee) {
+      return Promise.reject();
+    }
   });
 };
 

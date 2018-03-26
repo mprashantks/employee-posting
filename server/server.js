@@ -22,16 +22,20 @@ app.post('/employees', (req, res) => {
   var body = _.pick(req.body, ['email', 'password', 'code']);
 
   console.log(body);
-
-  Employee.findByCode(body.code).then((employee) => {
-    employee.email = body.email;
-    employee.password = body.password;
-    employee.save().then(() => {
-      return employee.generateAuthToken();
-    }).then((token) => {
-      res.header('x-auth', token).send(employee);
+  Employee.findByEmail(body.email).then(() => {
+    console.log('find by code');
+    Employee.findByCode(body.code).then((employee) => {
+      employee.email = body.email;
+      employee.password = body.password;
+      employee.save().then(() => {
+        return employee.generateAuthToken();
+      }).then((token) => {
+        res.header('x-auth', token).send(employee);
+      }).catch((e) => {
+        res.status(400).send(e);
+      });
     }).catch((e) => {
-      res.status(400).send(e);
+      res.status(400).send();
     });
   }).catch((e) => {
     res.status(400).send();

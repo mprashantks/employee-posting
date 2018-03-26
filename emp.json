@@ -1,0 +1,107 @@
+{
+    "_id" : ObjectId("5ab96a774baf0c407af3f199"),
+    "code" : "1",
+    "name" : {
+        "first" : "Sujay",
+        "middle" : "Omprakash",
+        "last" : "Bangar"
+    },
+    "gender" : "Male",
+    "phone" : "9738365351",
+    "dob" : ISODate("1982-06-14T00:00:00.000Z"),
+    "posting" : {
+        "dolp" : ISODate("2014-06-14T00:00:00.000Z"),
+        "donp" : ISODate("2018-06-14T00:00:00.000Z")
+    },
+    "reservation" : "General",
+    "department" : "CPWD",
+    "staff_category" : "Engineering",
+    "designation" : "JE",
+    "post" : "Civil",
+    "region" : {
+        "authority" : "SDG",
+        "code" : "WR",
+        "name" : "MUMBAI"
+    },
+    "adg" : {
+        "authority" : "ADG",
+        "code" : "(WR-I)",
+        "name" : "Mumbai"
+    },
+    "zone" : {
+        "authority" : "CE",
+        "code" : "WZ IV",
+        "name" : "Gandhinagar"
+    }
+},
+{
+    "_id" : ObjectId("5ab96a8df7271c33c169c580"),
+    "code" : "2",
+    "name" : {
+        "first" : "Prashant",
+        "middle" : "Omprakash",
+        "last" : "Singh"
+    },
+    "gender" : "Male",
+    "phone" : "9738365551",
+    "dob" : ISODate("1981-06-14T00:00:00.000Z"),
+    "posting" : {
+        "dolp" : ISODate("2014-06-14T00:00:00.000Z"),
+        "donp" : ISODate("2019-06-14T00:00:00.000Z")
+    },
+    "reservation" : "General",
+    "department" : "CPWD",
+    "staff_category" : "Engineering",
+    "designation" : "JE",
+    "post" : "Civil",
+    "region" : {
+        "authority" : "SDG",
+        "code" : "WR",
+        "name" : "MUMBAI"
+    },
+    "adg" : {
+        "authority" : "ADG",
+        "code" : "(WR-I)",
+        "name" : "Mumbai"
+    },
+    "zone" : {
+        "authority" : "CE",
+        "code" : "WZ IV",
+        "name" : "Gandhinagar"
+    }
+},
+{
+    "_id" : ObjectId("5ab96ada4baf0c407af3f19a"),
+    "code" : "3",
+    "name" : {
+        "first" : "Swati",
+        "middle" : "Chauhan"
+    },
+    "gender" : "Female",
+    "phone" : "9738565351",
+    "dob" : ISODate("1982-06-14T00:00:00.000Z"),
+    "posting" : {
+        "dolp" : ISODate("2014-06-14T00:00:00.000Z"),
+        "donp" : ISODate("2018-06-14T00:00:00.000Z")
+    },
+    "reservation" : "General",
+    "department" : "CPWD",
+    "staff_category" : "Engineering",
+    "designation" : "JE",
+    "post" : "Civil",
+    "region" : {
+        "authority" : "SDG",
+        "code" : "WR",
+        "name" : "MUMBAI"
+    },
+    "adg" : {
+        "authority" : "ADG",
+        "code" : "(WR-I)",
+        "name" : "Mumbai"
+    },
+    "zone" : {
+        "authority" : "CE",
+        "code" : "WZ IV",
+        "name" : "Gandhinagar"
+    }
+}
