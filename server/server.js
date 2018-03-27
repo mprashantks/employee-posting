@@ -7,6 +7,7 @@ const _ = require('lodash');
 
 const {mongoose} = require('./db/mongoose');
 const {Employee} = require('./models/Employee');
+const {Vacancy} = require('./models/Vacancy');
 const {authenticate} = require('./middleware/authenticate');
 
 const publicPath = path.join(__dirname, '/../public');
@@ -78,6 +79,39 @@ app.post('/admin/transfer', (req, res) => {
     res.status(400).send();
   });
 });
+
+// // Handle to find vacant_positions
+// app.post('/admin/vacancy', (req, res) => {
+//   Vacancy.findVacantPositions().then((vacant_positions) => {
+//     res.status(200).send(vacant_positions);
+//   }).catch((e) => {
+//     res.status(400).send();
+//   });
+// });
+
+// Handle to find vacant_positions
+app.post('/admin/vacancy', (req, res) => {
+  Vacancy.findVacantPositions().then((vacant_positions) => {
+    vacant_positions.forEach((r) => {
+      r.region.forEach((region) => {
+        region.adg.forEach((adg) => {
+          adg.zone.forEach((zone) => {
+            if (zone.vacancy.number > 0) {
+              zone.vacancy.positions.forEach((position) => {
+                console.log(position);
+              });
+            }
+          });
+        })
+      });
+    });
+    res.status(200).send(vacant_positions);
+  }).catch((e) => {
+    res.status(400).send();
+  });
+});
+
+
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

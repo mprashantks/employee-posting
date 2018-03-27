@@ -1,0 +1,356 @@
+{
+    "_id" : ObjectId("5aba586b5f25d001cc5396d3"),
+    "region" : [
+        {
+            "authority" : "SDG",
+            "code" : "HQ",
+            "name" : "New Delhi",
+            "adg" : [
+                {
+                    "authority" : "ADG",
+                    "code" : "Trg",
+                    "name" : "Delhi",
+                    "zone" : [
+                        {
+                            "authority" : "CE",
+                            "code" : "(Trg cum R&D) cum ED (DMC)",
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 60,
+                            "existing_strength" : 52,
+                            "vacancy" : {
+                                "number" : 8,
+                                "positions" : [
+                                    {
+                                        "designation" : "JE",
+                                        "number" : 5
+                                    },
+                                    {
+                                        "designation" : "AE",
+                                        "number" : 3
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(Trg cum R&D)",
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 60,
+                            "existing_strength" : 60,
+                            "vacancy" : {
+                                "number" : 0
+                            }
+                        },
+                        {
+                            "authority" : "CA",
+                            "code" : "(Trg cum R&D)",
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 45,
+                            "existing_strength" : 42,
+                            "vacancy" : {
+                                "number" : 3,
+                                "positions" : [
+                                    {
+                                        "designation" : "ADG",
+                                        "number" : 1
+                                    },
+                                    {
+                                        "designation" : "JE",
+                                        "number" : 2
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "authority" : "ADG",
+                    "code" : "ARCH",
+                    "name" : "Delhi",
+                    "zone" : [
+                        {
+                            "authority" : "CE",
+                            "code" : "D&DM",
+                            "name" : "Delhi"
+                        },
+                        {
+                            "authority" : "ED",
+                            "code" : "CSO",
+                            "name" : "Delhi"
+                        },
+                        {
+                            "authority" : "DDDG",
+                            "code" : "PPP",
+                            "name" : "Delhi"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "authority" : "SDG",
+            "code" : "DR",
+            "name" : "New Delhi",
+            "adg" : [
+                {
+                    "authority" : "ADG",
+                    "code" : "DR",
+                    "name" : "Delhi",
+                    "zone" : [
+                        {
+                            "authority" : "CPM",
+                            "code" : "IITDP",
+                            "name" : "Delhi"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "PNB",
+                            "name" : "Delhi"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "GPRA",
+                            "name" : "Delhi"
+                        }
+                    ]
+                },
+                {
+                    "authority" : "ADG",
+                    "code" : "NDR",
+                    "name" : "Delhi",
+                    "zone" : [
+                        {
+                            "authority" : "CPM",
+                            "code" : "SCEP",
+                            "name" : "Delhi"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "CAP",
+                            "name" : "FIMS Delhi"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(NDZ)-I",
+                            "name" : "Delhi"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(NDZ)-II",
+                            "name" : "Delhi"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "authority" : "SDG",
+            "code" : "NR",
+            "name" : "New Delhi",
+            "adg" : [
+                {
+                    "authority" : "ADG",
+                    "code" : "NR-1",
+                    "name" : "Chandigarh",
+                    "zone" : [
+                        {
+                            "authority" : "CPM",
+                            "code" : "IITP",
+                            "name" : "Mandi"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "(NZ) I",
+                            "name" : "Chandigarh"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "(NZ) V",
+                            "name" : "Jammu"
+                        }
+                    ]
+                },
+                {
+                    "authority" : "ADG",
+                    "code" : "NR - II",
+                    "name" : "Lucknow",
+                    "zone" : [
+                        {
+                            "authority" : "CPM",
+                            "code" : "CURP",
+                            "name" : "Ajmer"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "NZ II",
+                            "name" : "Lucknow"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "IITPZ",
+                            "name" : "Jodhpur"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(NZ)-III",
+                            "name" : "Jaipur"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "authority" : "SDG",
+            "code" : "WR",
+            "name" : "Mumbai",
+            "adg" : [
+                {
+                    "authority" : "ADG",
+                    "code" : "WR-1",
+                    "name" : "Mumbai",
+                    "zone" : [
+                        {
+                            "authority" : "CE",
+                            "code" : "(WZ) I",
+                            "name" : "Mumbai"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(WZ) III",
+                            "name" : "Mumbai"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(WZ) IV",
+                            "name" : "Gandhinagar"
+                        }
+                    ]
+                },
+                {
+                    "authority" : "ADG",
+                    "code" : "WR - II",
+                    "name" : "Bhopal",
+                    "zone" : [
+                        {
+                            "authority" : "CE",
+                            "code" : "CZ",
+                            "name" : "Bhopal"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(CZ) -II",
+                            "name" : "Nagpur"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(WZ)-V",
+                            "name" : "Raipur"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "authority" : "SDG",
+            "code" : "ER",
+            "name" : "Kolkata",
+            "adg" : [
+                {
+                    "authority" : "ADG",
+                    "code" : "ER-1",
+                    "name" : "Kolkata",
+                    "zone" : [
+                        {
+                            "authority" : "CPM",
+                            "code" : "IIT",
+                            "name" : "Patna"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "IIT",
+                            "name" : "Bhubaneshwar"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(EZ) I",
+                            "name" : "Kolkata"
+                        }
+                    ]
+                },
+                {
+                    "authority" : "ADG",
+                    "code" : "ER - II",
+                    "name" : "Guwahati",
+                    "zone" : [
+                        {
+                            "authority" : "CPM",
+                            "code" : "NIT",
+                            "name" : "Imphal"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(NEZ) -I",
+                            "name" : "Shilong"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(NEZ) -I",
+                            "name" : "Agartala"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "authority" : "SDG",
+            "code" : "SR",
+            "name" : "Chennai",
+            "adg" : [
+                {
+                    "authority" : "ADG",
+                    "code" : "SR-1",
+                    "name" : "Chennai",
+                    "zone" : [
+                        {
+                            "authority" : "CPM",
+                            "code" : "CUT",
+                            "name" : "Thiruvarur"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "NSG",
+                            "name" : "Hyderabad"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(SZ) I",
+                            "name" : "Chennai"
+                        }
+                    ]
+                },
+                {
+                    "authority" : "ADG",
+                    "code" : "SR - II",
+                    "name" : "Bangalore",
+                    "zone" : [
+                        {
+                            "authority" : "CPM",
+                            "code" : "NIT",
+                            "name" : "Calicut"
+                        },
+                        {
+                            "authority" : "CPM",
+                            "code" : "IISER",
+                            "name" : "Trivendrum"
+                        },
+                        {
+                            "authority" : "CE",
+                            "code" : "(SZ) -III",
+                            "name" : "Bangalore"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
