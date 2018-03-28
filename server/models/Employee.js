@@ -142,7 +142,7 @@ var EmployeeSchema = new mongoose.Schema({
 EmployeeSchema.methods.toJSON = function () {
   var user = this;
   var userObject = user.toObject();
-  return _.pick(userObject, ['_id', 'email']);
+  return _.pick(userObject, ['_id', 'code', 'email']);
 };
 
 // Called by server.js /employees route to register

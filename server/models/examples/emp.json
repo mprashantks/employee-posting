@@ -21,17 +21,17 @@
     "region" : {
         "authority" : "SDG",
         "code" : "WR",
-        "name" : "MUMBAI"
-    },
-    "adg" : {
-        "authority" : "ADG",
-        "code" : "(WR-I)",
-        "name" : "Mumbai"
-    },
-    "zone" : {
-        "authority" : "CE",
-        "code" : "WZ IV",
-        "name" : "Gandhinagar"
+        "name" : "MUMBAI",
+        "adg" : {
+            "authority" : "ADG",
+            "code" : "(WR-I)",
+            "name" : "Mumbai",
+            "zone" : {
+                "authority" : "CE",
+                "code" : "WZ IV",
+                "name" : "Gandhinagar"
+            }
+        }
     }
 },
 {
@@ -57,17 +57,17 @@
     "region" : {
         "authority" : "SDG",
         "code" : "WR",
-        "name" : "MUMBAI"
-    },
-    "adg" : {
-        "authority" : "ADG",
-        "code" : "(WR-I)",
-        "name" : "Mumbai"
-    },
-    "zone" : {
-        "authority" : "CE",
-        "code" : "WZ IV",
-        "name" : "Gandhinagar"
+        "name" : "MUMBAI",
+        "adg" : {
+            "authority" : "ADG",
+            "code" : "(WR-I)",
+            "name" : "Mumbai",
+            "zone" : {
+                "authority" : "CE",
+                "code" : "WZ IV",
+                "name" : "Gandhinagar"
+            }
+        }
     }
 },
 {
@@ -92,16 +92,16 @@
     "region" : {
         "authority" : "SDG",
         "code" : "WR",
-        "name" : "MUMBAI"
-    },
-    "adg" : {
-        "authority" : "ADG",
-        "code" : "(WR-I)",
-        "name" : "Mumbai"
-    },
-    "zone" : {
-        "authority" : "CE",
-        "code" : "WZ IV",
-        "name" : "Gandhinagar"
+        "name" : "MUMBAI",
+        "adg" : {
+            "authority" : "ADG",
+            "code" : "(WR-I)",
+            "name" : "Mumbai",
+            "zone" : {
+                "authority" : "CE",
+                "code" : "WZ IV",
+                "name" : "Gandhinagar"
+            }
+        }
     }
 }
