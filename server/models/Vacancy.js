@@ -28,6 +28,12 @@ var VacancySchema = new mongoose.Schema({
   }]
 });
 
+// VacancySchema.methods.toJSON = function () {
+//   var vacancy = this;
+//   var vacancyObject = vacancy.toObject();
+//   return _.pick(vacancyObject, ['_id', 'code', 'email']);
+// };
+
 VacancySchema.statics.findVacantPositions = function () {
   var Vacancy = this;
   return Vacancy.find({

@@ -91,34 +91,34 @@ var EmployeeSchema = new mongoose.Schema({
     name: {
       type: String,
       required: true
-    }
-  },
-  adg: {
-    authority: {
-      type: String,
-      required: true
     },
-    code: {
-      type: String,
-      required: true
-    },
-    name: {
-      type: String,
-      required: true
-    }
-  },
-  zone: {
-    authority: {
-      type: String,
-      required: true
-    },
-    code: {
-      type: String,
-      required: true
-    },
-    name: {
-      type: String,
-      required: true
+    adg: {
+      authority: {
+        type: String,
+        required: true
+      },
+      code: {
+        type: String,
+        required: true
+      },
+      name: {
+        type: String,
+        required: true
+      },
+      zone: {
+        authority: {
+          type: String,
+          required: true
+        },
+        code: {
+          type: String,
+          required: true
+        },
+        name: {
+          type: String,
+          required: true
+        }
+      }
     }
   },
   password: {
