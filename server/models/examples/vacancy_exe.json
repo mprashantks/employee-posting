@@ -1,5 +1,4 @@
 {
-    "_id" : ObjectId("5aba586b5f25d001cc5396d3"),
     "region" : [
         {
             "authority" : "SDG",
@@ -71,17 +70,38 @@
                         {
                             "authority" : "CE",
                             "code" : "D&DM",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 40,
+                            "existing_strength" : 40,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "ED",
                             "code" : "CSO",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 30,
+                            "existing_strength" : 29,
+                            "vacancy" : {
+                                "number" : 1,
+                                "positions" : [
+                                    {
+                                        "designation" : "AE",
+                                        "number" : 1
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "DDDG",
                             "code" : "PPP",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 40,
+                            "existing_strength" : 40,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 }
@@ -100,17 +120,46 @@
                         {
                             "authority" : "CPM",
                             "code" : "IITDP",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 38,
+                            "existing_strength" : 34,
+                            "vacancy" : {
+                                "number" : 4,
+                                "positions" : [
+                                    {
+                                        "designation" : "AE",
+                                        "number" : 1
+                                    },
+                                    {
+                                        "designation" : "JE",
+                                        "number" : 1
+                                    },
+                                    {
+                                        "designation" : "ADG",
+                                        "number" : 2
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "PNB",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 50,
+                            "existing_strength" : 50,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "GPRA",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 40,
+                            "existing_strength" : 40,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 },
@@ -122,22 +171,58 @@
                         {
                             "authority" : "CPM",
                             "code" : "SCEP",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 61,
+                            "existing_strength" : 60,
+                            "vacancy" : {
+                                "number" : 1,
+                                "positions" : [
+                                    {
+                                        "designation" : "ADG",
+                                        "number" : 1
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "CAP",
-                            "name" : "FIMS Delhi"
+                            "name" : "FIMS Delhi",
+                            "sanctioned_strength" : 32,
+                            "existing_strength" : 32,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(NDZ)-I",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 65,
+                            "existing_strength" : 62,
+                            "vacancy" : {
+                                "number" : 3,
+                                "positions" : [
+                                    {
+                                        "designation" : "ADG",
+                                        "number" : 2
+                                    },
+                                    {
+                                        "designation" : "AE",
+                                        "number" : 1
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(NDZ)-II",
-                            "name" : "Delhi"
+                            "name" : "Delhi",
+                            "sanctioned_strength" : 50,
+                            "existing_strength" : 50,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 }
@@ -156,17 +241,38 @@
                         {
                             "authority" : "CPM",
                             "code" : "IITP",
-                            "name" : "Mandi"
+                            "name" : "Mandi",
+                            "sanctioned_strength" : 45,
+                            "existing_strength" : 45,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "(NZ) I",
-                            "name" : "Chandigarh"
+                            "name" : "Chandigarh",
+                            "sanctioned_strength" : 55,
+                            "existing_strength" : 54,
+                            "vacancy" : {
+                                "number" : 1,
+                                "positions" : [
+                                    {
+                                        "designation" : "AE",
+                                        "number" : 1
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "(NZ) V",
-                            "name" : "Jammu"
+                            "name" : "Jammu",
+                            "sanctioned_strength" : 30,
+                            "existing_strength" : 30,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 },
@@ -178,22 +284,42 @@
                         {
                             "authority" : "CPM",
                             "code" : "CURP",
-                            "name" : "Ajmer"
+                            "name" : "Ajmer",
+                            "sanctioned_strength" : 46,
+                            "existing_strength" : 46,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "NZ II",
-                            "name" : "Lucknow"
+                            "name" : "Lucknow",
+                            "sanctioned_strength" : 40,
+                            "existing_strength" : 40,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "IITPZ",
-                            "name" : "Jodhpur"
+                            "name" : "Jodhpur",
+                            "sanctioned_strength" : 57,
+                            "existing_strength" : 57,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(NZ)-III",
-                            "name" : "Jaipur"
+                            "name" : "Jaipur",
+                            "sanctioned_strength" : 33,
+                            "existing_strength" : 33,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 }
@@ -212,17 +338,52 @@
                         {
                             "authority" : "CE",
                             "code" : "(WZ) I",
-                            "name" : "Mumbai"
+                            "name" : "Mumbai",
+                            "sanctioned_strength" : 45,
+                            "existing_strength" : 42,
+                            "vacancy" : {
+                                "number" : 3,
+                                "positions" : [
+                                    {
+                                        "designation" : "AE",
+                                        "number" : 1
+                                    },
+                                    {
+                                        "designation" : "JE",
+                                        "number" : 2
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(WZ) III",
-                            "name" : "Mumbai"
+                            "name" : "Mumbai",
+                            "sanctioned_strength" : 55,
+                            "existing_strength" : 51,
+                            "vacancy" : {
+                                "number" : 4,
+                                "positions" : [
+                                    {
+                                        "designation" : "ADG",
+                                        "number" : 2
+                                    },
+                                    {
+                                        "designation" : "AE",
+                                        "number" : 2
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(WZ) IV",
-                            "name" : "Gandhinagar"
+                            "name" : "Gandhinagar",
+                            "sanctioned_strength" : 61,
+                            "existing_strength" : 61,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 },
@@ -234,17 +395,38 @@
                         {
                             "authority" : "CE",
                             "code" : "CZ",
-                            "name" : "Bhopal"
+                            "name" : "Bhopal",
+                            "sanctioned_strength" : 45,
+                            "existing_strength" : 44,
+                            "vacancy" : {
+                                "number" : 1,
+                                "positions" : [
+                                    {
+                                        "designation" : "AE",
+                                        "number" : 1
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(CZ) -II",
-                            "name" : "Nagpur"
+                            "name" : "Nagpur",
+                            "sanctioned_strength" : 58,
+                            "existing_strength" : 58,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(WZ)-V",
-                            "name" : "Raipur"
+                            "name" : "Raipur",
+                            "sanctioned_strength" : 66,
+                            "existing_strength" : 66,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 }
@@ -263,17 +445,42 @@
                         {
                             "authority" : "CPM",
                             "code" : "IIT",
-                            "name" : "Patna"
+                            "name" : "Patna",
+                            "sanctioned_strength" : 45,
+                            "existing_strength" : 42,
+                            "vacancy" : {
+                                "number" : 3,
+                                "positions" : [
+                                    {
+                                        "designation" : "ADG",
+                                        "number" : 1
+                                    },
+                                    {
+                                        "designation" : "JE",
+                                        "number" : 2
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "IIT",
-                            "name" : "Bhubaneshwar"
+                            "name" : "Bhubaneshwar",
+                            "sanctioned_strength" : 40,
+                            "existing_strength" : 40,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(EZ) I",
-                            "name" : "Kolkata"
+                            "name" : "Kolkata",
+                            "sanctioned_strength" : 45,
+                            "existing_strength" : 45,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 },
@@ -285,17 +492,38 @@
                         {
                             "authority" : "CPM",
                             "code" : "NIT",
-                            "name" : "Imphal"
+                            "name" : "Imphal",
+                            "sanctioned_strength" : 32,
+                            "existing_strength" : 32,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(NEZ) -I",
-                            "name" : "Shilong"
+                            "name" : "Shilong",
+                            "sanctioned_strength" : 30,
+                            "existing_strength" : 29,
+                            "vacancy" : {
+                                "number" : 1,
+                                "positions" : [
+                                    {
+                                        "designation" : "ADG",
+                                        "number" : 1
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(NEZ) -I",
-                            "name" : "Agartala"
+                            "name" : "Agartala",
+                            "sanctioned_strength" : 37,
+                            "existing_strength" : 37,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 }
@@ -314,17 +542,32 @@
                         {
                             "authority" : "CPM",
                             "code" : "CUT",
-                            "name" : "Thiruvarur"
+                            "name" : "Thiruvarur",
+                            "sanctioned_strength" : 54,
+                            "existing_strength" : 54,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "NSG",
-                            "name" : "Hyderabad"
+                            "name" : "Hyderabad",
+                            "sanctioned_strength" : 50,
+                            "existing_strength" : 50,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(SZ) I",
-                            "name" : "Chennai"
+                            "name" : "Chennai",
+                            "sanctioned_strength" : 67,
+                            "existing_strength" : 67,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 },
@@ -336,17 +579,38 @@
                         {
                             "authority" : "CPM",
                             "code" : "NIT",
-                            "name" : "Calicut"
+                            "name" : "Calicut",
+                            "sanctioned_strength" : 41,
+                            "existing_strength" : 41,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         },
                         {
                             "authority" : "CPM",
                             "code" : "IISER",
-                            "name" : "Trivendrum"
+                            "name" : "Trivendrum",
+                            "sanctioned_strength" : 56,
+                            "existing_strength" : 55,
+                            "vacancy" : {
+                                "number" : 1,
+                                "positions" : [
+                                    {
+                                        "designation" : "JE",
+                                        "number" : 1
+                                    }
+                                ]
+                            }
                         },
                         {
                             "authority" : "CE",
                             "code" : "(SZ) -III",
-                            "name" : "Bangalore"
+                            "name" : "Bangalore",
+                            "sanctioned_strength" : 52,
+                            "existing_strength" : 52,
+                            "vacancy" : {
+                                "number" : 0
+                            }
                         }
                     ]
                 }

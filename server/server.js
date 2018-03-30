@@ -90,9 +90,12 @@ app.post('/admin/transfer', (req, res) => {
             adg.zone.forEach((zone) => {
               if (zone.vacancy.number > 0) {
                 zone.vacancy.positions.forEach((position) => {
-                  console.log(position);
+                  console.log('Region: '+region.code+', ADG: '+adg.code+', Zone: '+zone.code+', Position: '+position.designation+' | '+position.number);
+                  // var previous_region_code = indexToRegion[(5+regionToIndex[region.code])%6];
                   // employees.forEach((employee) => {
-                    // if (employee.region.code === '')
+                  //   if (employee.region.code === previous_region_code) {
+                  //
+                  //   }
                   // });
                 });
               }
@@ -100,6 +103,7 @@ app.post('/admin/transfer', (req, res) => {
           })
         });
       });
+      res.status(200).send();
     }).catch((e) => {
       res.status(204).send('No vacant regions found');
     });
