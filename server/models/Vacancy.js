@@ -36,11 +36,7 @@ var VacancySchema = new mongoose.Schema({
 
 VacancySchema.statics.findVacantPositions = function () {
   var Vacancy = this;
-  return Vacancy.find({
-    'region.adg.zone.vacancy.number': {
-      $gt: 0
-    }
-  }).then((vacant_positions) => {
+  return Vacancy.find({}).then((vacant_positions) => {
     if (vacant_positions.length == 0) {
       return Promise.reject();
     }

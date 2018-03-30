@@ -7,6 +7,7 @@ var TransferAllocation = mongoose.model('TransferAllocation', {
     required: true,
     unique: true
   },
+  status: String,
   region: {
     authority: String,
     code: String,

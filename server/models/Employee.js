@@ -138,13 +138,6 @@ var EmployeeSchema = new mongoose.Schema({
   }]
 });
 
-
-EmployeeSchema.methods.toJSON = function () {
-  var user = this;
-  var userObject = user.toObject();
-  return _.pick(userObject, ['_id', 'code', 'email']);
-};
-
 // Called by server.js /employees route to register
 EmployeeSchema.pre('save', function (next) {
   var employee = this;
@@ -200,24 +193,19 @@ EmployeeSchema.statics.findByCredentials = function (email, password) {
 };
 
 // Called by server.js employees/ route to verify if employee database consist of particular employee code or not
-EmployeeSchema.statics.findByCode = function (code) {
+EmployeeSchema.statics.findByCode = function (code, email) {
   var Employee = this;
   return Employee.findOne({code}).then((employee) => {
     if(!employee) {
       return Promise.reject();
     }
     return new Promise((resolve, reject) => {
-      resolve(employee);
+      if(employee.email === email) {
+        resolve(employee);
+      } else {
+        reject();
+      }
     });
-  });
-};
-
-EmployeeSchema.statics.findByEmail = function (email) {
-  var Employee = this;
-  return Employee.findOne({email}).then((employee) => {
-    if(employee) {
-      return Promise.reject();
-    }
   });
 };
 

@@ -1,0 +1,74 @@
+// Handle to find vacant_positions
+app.post('/vacancy', (req, res) => {
+  var body = _.pick(req.body, ['designation', 'region', 'adg', 'zone']);
+  console.log(body.designation);
+
+  Vacancy.findVacantPositions().then((vacant_positions) => {
+    vacant_positions.forEach((r) => {
+      if (!body.region) {     // Region given
+        var region = getRegion(body.region, r.region);
+        if (!body.adg) {      // ADG given
+          var adg = getAdg(body.adg, region.adg);
+          if (!body.zone) {   // Zone given
+            var zone = getZone(body.zone, adg.zone);
+            getVacantPositions(adg.zone, body.position);
+          } else {                        // Not zone given
+            adg.zone.forEach((zone) => {
+              getVacantPositions(zone, body.position);
+            });
+          }
+        } else {                          // Not adg given
+          region.adg.forEach((adg) => {
+            adg.zone.forEach((zone) => {
+              getVacantPositions(zone, body.position);
+            });
+          })
+        }
+      } else {                            // Not region given
+        r.region.forEach((region) => {
+          region.adg.forEach((adg) => {
+            adg.zone.forEach((zone) => {
+              getVacantPositions(zone, body.position);
+            });
+          })
+        });
+      }
+    });
+    res.status(200).send();
+  }).catch((e) => {
+    res.status(204).send('No vacant regions found');
+  });
+});
+
+
+
+
+function getRegion(regionCode, regions) {
+  regions.forEach((region) => {
+    if (region.code == regionCode)
+      return region;
+  });
+}
+
+function getAdg(adgCode, adgs) {
+  adgs.forEach((adg) => {
+    if (adg.code == adgCode)
+      return adg;
+  });
+}
+
+function getZone(zoneCode, zones) {
+  zoness.forEach((zone) => {
+    if (zone.code == zoneCode)
+      return zone;
+  });
+}
+
+function getVacantPositions(zone, desg) {
+  if (zone.vacancy.number > 0) {
+    zone.vacancy.positions.forEach((position) => {
+      if (position.designation == desg)
+        console.log('Region: '+region.code+', ADG: '+adg.code+', Zone: '+zone.code+', Position: '+position.designation+' | '+position.number);
+    });
+  }
+}
