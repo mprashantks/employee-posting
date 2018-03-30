@@ -73,10 +73,38 @@ app.delete('/employees/me/token', authenticate, (req, res) => {
 /* ----------- Handles for employee transfer -------------- */
 // Handle for auto transfer of employees
 app.post('/admin/transfer', (req, res) => {
+  var indexToRegion = ['HQ', 'DR', 'NR', 'WR', 'ER', 'SR'];
+  var regionToIndex = {
+    HQ: 0,
+    DR: 1,
+    NR: 2,
+    WR: 3,
+    ER: 4,
+    SR: 5
+  };
   Employee.findTransferEmployees().then((employees) => {
-    res.status(200).send(employees);
+    Vacancy.findVacantPositions().then((vacant_positions) => {
+      vacant_positions.forEach((r) => {
+        r.region.forEach((region) => {
+          region.adg.forEach((adg) => {
+            adg.zone.forEach((zone) => {
+              if (zone.vacancy.number > 0) {
+                zone.vacancy.positions.forEach((position) => {
+                  console.log(position);
+                  // employees.forEach((employee) => {
+                    // if (employee.region.code === '')
+                  // });
+                });
+              }
+            });
+          })
+        });
+      });
+    }).catch((e) => {
+      res.status(204).send('No vacant regions found');
+    });
   }).catch((e) => {
-    res.status(400).send();
+    res.status(204).send('No transferrable employees found');
   });
 });
 
@@ -89,27 +117,10 @@ app.post('/admin/transfer', (req, res) => {
 //   });
 // });
 
-// Handle to find vacant_positions
-app.post('/admin/vacancy', (req, res) => {
-  Vacancy.findVacantPositions().then((vacant_positions) => {
-    vacant_positions.forEach((r) => {
-      r.region.forEach((region) => {
-        region.adg.forEach((adg) => {
-          adg.zone.forEach((zone) => {
-            if (zone.vacancy.number > 0) {
-              zone.vacancy.positions.forEach((position) => {
-                console.log(position);
-              });
-            }
-          });
-        })
-      });
-    });
-    res.status(200).send(vacant_positions);
-  }).catch((e) => {
-    res.status(400).send();
-  });
-});
+// // Handle to find vacant_positions
+// app.post('/admin/vacancy', (req, res) => {
+//
+// });
 
 
 

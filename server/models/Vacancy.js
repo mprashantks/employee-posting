@@ -41,6 +41,9 @@ VacancySchema.statics.findVacantPositions = function () {
       $gt: 0
     }
   }).then((vacant_positions) => {
+    if (vacant_positions.length == 0) {
+      return Promise.reject();
+    }
     return new Promise((resolve, reject) => {
       resolve(vacant_positions);
     });
