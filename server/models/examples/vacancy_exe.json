@@ -50,7 +50,7 @@
                                 "number" : 3,
                                 "positions" : [
                                     {
-                                        "designation" : "ADG",
+                                        "designation" : "EE",
                                         "number" : 1
                                     },
                                     {
@@ -135,7 +135,7 @@
                                         "number" : 1
                                     },
                                     {
-                                        "designation" : "ADG",
+                                        "designation" : "EE",
                                         "number" : 2
                                     }
                                 ]
@@ -178,7 +178,7 @@
                                 "number" : 1,
                                 "positions" : [
                                     {
-                                        "designation" : "ADG",
+                                        "designation" : "JE",
                                         "number" : 1
                                     }
                                 ]
@@ -204,7 +204,7 @@
                                 "number" : 3,
                                 "positions" : [
                                     {
-                                        "designation" : "ADG",
+                                        "designation" : "JE",
                                         "number" : 2
                                     },
                                     {
@@ -365,7 +365,7 @@
                                 "number" : 4,
                                 "positions" : [
                                     {
-                                        "designation" : "ADG",
+                                        "designation" : "EE",
                                         "number" : 2
                                     },
                                     {
@@ -402,7 +402,7 @@
                                 "number" : 1,
                                 "positions" : [
                                     {
-                                        "designation" : "AE",
+                                        "designation" : "JE",
                                         "number" : 1
                                     }
                                 ]
@@ -452,7 +452,7 @@
                                 "number" : 3,
                                 "positions" : [
                                     {
-                                        "designation" : "ADG",
+                                        "designation" : "EE",
                                         "number" : 1
                                     },
                                     {
@@ -509,7 +509,7 @@
                                 "number" : 1,
                                 "positions" : [
                                     {
-                                        "designation" : "ADG",
+                                        "designation" : "AE",
                                         "number" : 1
                                     }
                                 ]
