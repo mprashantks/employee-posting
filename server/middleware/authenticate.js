@@ -1,8 +1,8 @@
 const {Employee} = require('./../models/Employee');
 
 var authenticate = (req, res, next) => {
-  var token = req.header('x-auth');
-
+  var token = req.header('xauth');
+  
   Employee.findByToken(token).then((employee) => {
     if(!employee) {
       return Promise.reject();

@@ -4,6 +4,30 @@ const path = require('path');
 const express = require('express');``
 const bodyParser = require('body-parser');
 const _ = require('lodash');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+const csvWriter = createCsvWriter({
+  path: 'file.csv',
+  header: [
+    {id: 'Technical', title: 'Technical'},
+    {id: 'communication', title: 'Communication'},
+    {id: 'teamwork', title: 'Team Work'},
+    {id: 'value_cocreation', title: 'Value Co-creation'},
+    {id: 'leadership', title: 'ds'},
+    {id: 'work_managmement', title: 'df'},
+    {id: 'discipline', title: 'fd'},
+    {id: 'time_management', title: 'df'},
+    {id: 'personel_management', title: 'df'},
+    {id: 'Values', title: 'df'},
+    {id: 'honesty', title: 'fd'},
+    {id: 'hardworking', title: 'df'},
+    {id: 'sincerity', title: 's'},
+    {id: 'responsible', title: 'sdf'},
+    {id: 'ethics', title: 'fd'},
+    {id: 'health', title: 'fd'},
+    {id: 'age', title: 'fd'},
+    {id: 'transfer_distribution', title: 'fdd'}
+  ]
+});
 
 const {mongoose} = require('./db/mongoose');
 const {Employee} = require('./models/Employee');
@@ -79,6 +103,28 @@ app.delete('/employees/me/token', authenticate, (req, res) => {
   });
 });
 
+// Handle to find employees and generate CSV
+app.get('/vacancy', (req, res) => {
+  Employee.findTransferEmployees().then((employees) => {
+    var records = [];
+    employees.forEach((employee) => {
+      var record = {};
+      employee.features.forEach((feature) => {
+        record[feature.name] = feature.score;
+      });
+      records.push(record);
+    });
+    csvWriter.writeRecords(records)
+    .then(() => {
+      console.log('Done');
+    });
+    res.status(200).send();
+  }).catch((e) => {
+    res.status(204).send();
+  });
+});
+
+
 /* ----------- Handles for employee transfer -------------- */
 // Handle for auto transfer of employees based on circular rotation
 // app.post('/admin/transfer', (req, res) => {
@@ -150,50 +196,52 @@ app.delete('/employees/me/token', authenticate, (req, res) => {
 
 // Handle to find vacant_positions based on selected options
 // app.post('/vacancy', (req, res) => {
-//   var body = _.pick(req.body, ['designation', 'regison', 'adg', 'zone']);
+//   // var body = _.pick(req.body, ['designation', 'region', 'adg', 'zone']);
+//   var body = _.pick(req.body, ['designation', 'regionCode']);
 //
-//   Vacancy.findVacantPositions().then((vacant_positions) => {
-//     vacant_positions.forEach((r) => {
-//       if (!body.region != undefined) {     // Region given
-//         var region = getRegion(body.region, r.region);
-//         if (body.adg != undefined) {      // ADG given
-//           var adg = getAdg(body.adg, region.adg);
-//           if (body.zone != undefined) {   // Zone given
-//             var zone = getZone(body.zone, adg.zone);
-//             getVacantPositions(adg.zone, body.position);
-//           } else {                        // Not zone given
-//             adg.zone.forEach((zone) => {
-//               getVacantPositions(zone, body.position);
-//             });
-//           }
-//         } else {                          // Not adg given
-//           region.adg.forEach((adg) => {
-//             adg.zone.forEach((zone) => {
-//               getVacantPositions(zone, body.position);
-//             });
-//           })
-//         }
-//       } else {                            // Not region given
-//         r.region.forEach((region) => {
-//           region.adg.forEach((adg) => {
-//             adg.zone.forEach((zone) => {
-//               getVacantPositions(zone, body.position);
-//             });
-//           })
-//         });
-//       }
-//     });
+//   Vacancy.findVacantPositions().then((r_region) => {
+//     r_region = r_region[0];
+//     if (typeof body.regionCode != "undefined") {     // Region given
+//       r_region.region.some((region) => {
+//         return region.code == body.regionCode;
+//       });
+//       console.log(region);
+//       // if (body.adg != undefined) {      // ADG given
+//       //   var adg = getAdg(body.adg, region.adg);
+//       //   if (body.zone != undefined) {   // Zone given
+//       //     var zone = getZone(body.zone, adg.zone);
+//       //     getVacantPositions(adg.zone, body.position);
+//       //   } else {                        // Not zone given
+//       //     adg.zone.forEach((zone) => {
+//       //       getVacantPositions(zone, body.position);
+//       //     });
+//       //   }
+//       // } else {                          // Not adg given
+//       //   region.adg.forEach((adg) => {
+//       //     adg.zone.forEach((zone) => {
+//       //       getVacantPositions(zone, body.position);
+//       //     });
+//       //   })
+//       // }
+//     } else {                            // Not region given
+//       console.log('else');
+//       r_region.region.forEach((region) => {
+//         region.adg.forEach((adg) => {
+//           adg.zone.forEach((zone) => {
+//             getVacantPositions(zone, body.position);
+//           });
+//         })
+//       });
+//     }
+//
 //     res.status(200).send();
 //   }).catch((e) => {
 //     res.status(204).send('No vacant regions found');
 //   });
 // });
 
-
-
-
 function getRegion(regionCode, regions) {
-  regions.forEach((region) => {
+  regions.some((region) => {
     if (region.code == regionCode)
       return region;
   });

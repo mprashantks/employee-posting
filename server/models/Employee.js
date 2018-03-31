@@ -121,6 +121,16 @@ var EmployeeSchema = new mongoose.Schema({
       }
     }
   },
+  features: [{
+    name: {
+      type: String,
+      required: true
+    },
+    score: {
+      type: Number,
+      required: true
+    }
+  }],
   password: {
     type: String,
     minlength: 6,

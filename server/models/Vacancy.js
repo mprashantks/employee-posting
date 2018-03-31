@@ -36,7 +36,7 @@ var VacancySchema = new mongoose.Schema({
 
 VacancySchema.statics.findVacantPositions = function () {
   var Vacancy = this;
-  return Vacancy.find({}).then((vacant_positions) => {
+  return Vacancy.find({_id: '5abdf19062fe870e2185f239'}).then((vacant_positions) => {
     if (vacant_positions.length == 0) {
       return Promise.reject();
     }
